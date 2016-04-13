@@ -59,6 +59,7 @@ public class Utils {
     public static final int CAMRAM_RESULT = 500;
     public static final int KEY_ZHENGJIAN = 501;//证件照
     public static final int KEY_ZHUAPAI = 502;//抓拍照
+    public static final String KEY_PAIZHAO_NUM = "PAIZHAO_NUM";//拍照号码
 
     public static boolean fillTestData() {
         return false;

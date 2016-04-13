@@ -69,11 +69,14 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
                 .findViewById(R.id.id_text_vehicle_operator_spinner);
         btn_submit = (Button) mContentView
                 .findViewById(R.id.id_button_add_vehicle);
-
+        String carNum = Utils.ReadString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM);
+        if ("" != carNum) {
+            vehicle_number.setText(carNum);
+            vehicle_number.setFocusable(false);
+        }
         vehicle_photos.setFixedHeader(false);
         vehicle_photos.setClickPohoListener(onClickAddPhoto);
         btn_submit.setOnClickListener(this);
-
     }
 
     @Override
@@ -97,6 +100,7 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
             onButtonAddVehicle(view);
         }
     }
+
     // 拍照
     private OnClickListener onClickAddPhoto = new OnClickListener() {
 
@@ -209,16 +213,15 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
                 Toast.makeText(mContext, text, Toast.LENGTH_SHORT).show();
             } else {
                 vehicle.VehicleType = vehicle_type.getSelectedText();
-                // vehicle.VehicleColor =
-                // vehicle_color_spinner.getSelectedText();
                 vehicle.EmployeeId = vehicle_operator.getSelectedText();
                 vehicle.CreateTime = vehicle.CreateTime.replace("T", " ");
-
                 new CacheVehicleTask(mContext, vehicle).start();
 
                 Toast.makeText(mContext, R.string.text_add_vehicle_sucess,
                         Toast.LENGTH_SHORT).show();
-
+                if ("" != Utils.ReadString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM)) {
+                    MainActivity.pager.setCurrentItem(0);//跳回添加销售信息页面
+                }
                 clearVehicleForm();
             }
         }
@@ -231,5 +234,6 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
         vehicle_number.setText("");
         vehicle_peoples.setText("");
         vehicle_direction.setText("");
+        Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, "");
     }
 }

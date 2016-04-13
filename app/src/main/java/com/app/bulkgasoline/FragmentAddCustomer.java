@@ -135,20 +135,12 @@ public class FragmentAddCustomer extends BaseFragment implements
                 .findViewById(R.id.id_button_add_cusomer);
         zhengjian_img_iv = (ImageView) mContentView.findViewById(R.id.zhengjian_img_iv);
         zhuapai_img_iv = (ImageView) mContentView.findViewById(R.id.zhuapai_img_iv);
-        // #end
 
-        // #start ---相关控件点击事件---------
-        customer_photos.setClickPohoListener(onClickAddPhoto);
         read_card.setOnClickListener(this);
         is_doubt.setOnClickListener(this);
         btn_submit.setOnClickListener(this);
         zhengjian_img_iv.setOnClickListener(this);
         zhuapai_img_iv.setOnClickListener(this);
-        // #end
-
-        // #start ----------输入手机号文本框获得焦点时进行两图片进行比对操作----------------
-        final ArrayList<Bitmap> blist = customer_photos.getBitmaps();
-        final Bitmap bit = customer_photos.getHeader();
         tel_number.setOnFocusChangeListener(new OnFocusChangeListener() {
 
             @Override
@@ -189,23 +181,12 @@ public class FragmentAddCustomer extends BaseFragment implements
 
             @Override
             public void onFocusChange(View view, boolean result) {
-                if (!result) {// 失去焦点验证改车牌号是否为重点地区车辆
+                if (!result) {// 失去焦点验证改车牌号是否为重点地区车辆(Code_DangerZone)Utils.codesEqual
                     // 先判断是否为重点地区车辆，再判断是否是本地全国布控车辆
-                    ArrayList<String> keys = new ArrayList<String>();
-                    ArrayList<String> codes = new ArrayList<String>();
-                    if (Utils.codesEqual(mContext, "Code_DangerZone", keys,
-                            codes)) {
-                        System.out.println("11111111111111:" + keys.size());
-                        int i = 0;
-//						while (codes.size() > i) {
-//							if ("藏A".trim()
-//									.equals(codes.get(i))) {
-//								FragmentManager fragmentManager = getFragmentManager();
-//								System.out.println("跳转了吗？");
-//								break;
-//							}
-//							i++;
-//						}
+                    String num = vehicle_number.getText().toString().trim();//获得当前输入的车牌号
+                    if (num.contains("藏") || num.contains("新")) {
+                        MainActivity.pager.setCurrentItem(1);
+                        Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, num);
                     }
                 }
             }
@@ -273,14 +254,6 @@ public class FragmentAddCustomer extends BaseFragment implements
                 }
             }
         }
-//        } else if (Utils.CAMRAM_RESULT == requestCode) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                String path = Utils.getTempImagePath();
-//                Bitmap bitmap = Utils.decodeBitmapFromFile(path, 800 * 800);
-//                if (bitmap != null)
-//                    customer_photos.addPhoto(bitmap);
-//            }
-//        }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -374,7 +347,6 @@ public class FragmentAddCustomer extends BaseFragment implements
         @Override
         public void onResult(boolean result, CustomerModel customer) {
             hideProgressDialog();
-
             if (result) {
                 customer_name.setText(customer.CustomerName);
                 certi_type.setDefaultSelect();
@@ -389,6 +361,7 @@ public class FragmentAddCustomer extends BaseFragment implements
                 Toast.makeText(mContext, R.string.text_read_card_fail,
                         Toast.LENGTH_SHORT).show();
             }
+
         }
     };
 
@@ -561,6 +534,7 @@ public class FragmentAddCustomer extends BaseFragment implements
         vehicle_number.setText("");
         zhengjian_img_iv.setImageResource(R.drawable.default_header2);
         zhuapai_img_iv.setImageResource(R.drawable.default_header1);
+        Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, "");
     }
 
 
