@@ -122,5 +122,6 @@ public class SettingActivity extends BaseActivity {
 
         Toast.makeText(this, R.string.text_setting_saved, Toast.LENGTH_SHORT)
                 .show();
+        finish();
     }
 }
