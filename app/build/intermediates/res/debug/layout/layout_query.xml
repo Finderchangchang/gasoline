@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/layout_top_margin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height" >
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_query_type" />
+
+            <CheckBox
+                android:id="@+id/id_query_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:checked="true"
+                android:text="@string/text_query_customer" />
+
+            <CheckBox
+                android:id="@+id/id_query_vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/text_query_vehicle" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height" >
+
+            <TextView
+                android:id="@+id/id_label_query_condition"
+                style="@style/FormTextStyle"
+                android:text="@string/text_query_condition" />
+
+            <com.app.bulkgasoline.QueryTypeSpinner
+                android:id="@+id/id_query_type_spinner"
+                style="@style/FormSpinnerStyle"
+                android:layout_width="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_label_query_condition" />
+
+            <!-- <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/spinner_arrow" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height" >
+
+            <TextView
+                android:id="@+id/id_label_query_key"
+                style="@style/FormTextStyle"
+                android:text="@string/text_query_key" />
+
+            <ViewFlipper
+                android:id="@+id/id_view_flipper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_label_query_key" >
+
+                <EditText
+                    android:id="@+id/id_text_key"
+                    style="@style/FormEditStyle"
+                    android:layout_width="match_parent" />
+
+                <com.app.bulkgasoline.SpinnerCertiType
+                    android:id="@+id/id_certi_type_spinner"
+                    style="@style/FormSpinnerStyle"
+                    android:layout_width="fill_parent" />
+
+                <com.app.bulkgasoline.SpinnerBuyIntent
+                    android:id="@+id/id_text_buy_intent_spinner"
+                    style="@style/FormSpinnerStyle"
+                    android:layout_width="fill_parent" />
+
+                <com.app.bulkgasoline.SpinnerOperator
+                    android:id="@+id/id_text_operator_spinner"
+                    style="@style/FormSpinnerStyle"
+                    android:layout_width="fill_parent" />
+
+                <com.app.bulkgasoline.SpinnerVehicleType
+                    android:id="@+id/id_text_vehicle_type_spinner"
+                    style="@style/FormSpinnerStyle"
+                    android:layout_width="fill_parent" />
+
+                <CheckBox
+                    android:id="@+id/id_text_doubt"
+                    style="@style/FormTextStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/text_is_doubt" />
+            </ViewFlipper>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/id_button_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_top_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/bottom_bar_bg"
+            android:text="@string/text_button_query"
+            android:textColor="@color/color_tilte_bar_text" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/G:/Vikicc_Git/gasoline1/app/src/main/res/layout/layout_query.xml -->

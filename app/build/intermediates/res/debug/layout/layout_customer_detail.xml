@@ -1,0 +1,263 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/activity_bg">
+
+    <include layout="@layout/title_bar" android:id="@+id/id_title_bar_layout" android:visibility="gone"/>
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:id="@+id/id_title_layout"
+	    android:background="#46e38a2f"
+	    android:layout_marginTop="24dp"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingBottom="10dp"
+	    android:layout_height="@dimen/title_bar_height">
+	    
+		<TextView style="@style/MainTitleStyle"
+			android:text="@string/text_customer_detail"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_gravity="bottom"
+		/>
+
+		<ImageView
+	        android:id="@+id/id_button_back"
+			android:src="@drawable/icon_back"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			    
+	</RelativeLayout>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingTop="@dimen/activity_vertical_margin"
+		    android:paddingLeft="@dimen/activity_horizontal_margin"
+			android:paddingRight="@dimen/activity_horizontal_margin"    
+		    android:orientation="vertical">
+ 
+			<RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/header_height">
+	
+		       <com.app.bulkgasoline.PhotosLinearLayout
+				    android:layout_width="wrap_content"
+				    android:id="@+id/id_customer_photos"
+				    android:layout_centerHorizontal="true"
+				    android:layout_height="fill_parent"/>
+		       
+		    </RelativeLayout>
+	    
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_marginTop="@dimen/activity_vertical_margin"
+				android:background="@drawable/sep_line"
+				android:layout_height="wrap_content"/>
+				   	
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_customer_name"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_customer_name"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="王三"
+			    />
+		        
+		    </LinearLayout>
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_certi_type"
+					android:id="@+id/id_label_certi_type"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_certi_type"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="身份证"
+			    />
+
+		    </LinearLayout>
+		    
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_certi_number"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_certi_number"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="1234567890"
+			    />	        
+		    </LinearLayout>
+
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    	
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_tel_number"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_tel_number"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="03111010101"
+			    />	        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_liter"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_liter"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="10"
+			    />	        
+		    </LinearLayout>
+	
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_buy_intent"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_customer_purpose"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="机械"
+			    />		
+		    </LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_company_name"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_company_name"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="路桥建设公司"
+			    />	        
+		    </LinearLayout>
+		    
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_address"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_address"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="石家庄市新华区"
+			    />	        
+		    </LinearLayout>
+		    
+		    
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_operator"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_operator"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="李小明"
+			    />	 
+        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_doubt"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_doubt"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="可疑"
+			    />	        
+		    </LinearLayout>
+		    <LinearLayout
+		        android:id="@+id/id_doubt_desc_layout"
+			    android:layout_width="match_parent"
+			    android:visibility="gone"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_doubt_desc"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_doubt_desc"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="行为可疑"
+			    />	        
+		    </LinearLayout>
+		    
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/item_height">
+		    
+		        <TextView style="@style/FormTextStyle"
+					android:text="@string/text_buy_date"
+				/>
+		        
+		        <TextView style="@style/FormTextStyle"
+			        android:id="@+id/id_text_datetime"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="2015-01-11"
+			    />	        
+		    </LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout><!-- From: file:/G:/Vikicc_Git/gasoline1/app/src/main/res/layout/layout_customer_detail.xml -->

@@ -1,0 +1,348 @@
+[
+    {
+        "outputFile": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 201
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 226,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 374
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 206,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 1611,
+                        "endLine": 51,
+                        "endColumn": 12,
+                        "endOffset": 1936
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 778
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 966,
+                        "endLine": 34,
+                        "endColumn": 12,
+                        "endOffset": 1218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 783,
+                    "endLine": 22,
+                    "endColumn": 12,
+                    "endOffset": 1030
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 706,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 958
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1035,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1216
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 1419,
+                        "endLine": 44,
+                        "endColumn": 12,
+                        "endOffset": 1603
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1221,
+                    "endLine": 30,
+                    "endColumn": 12,
+                    "endOffset": 1403
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1226,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 1411
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1408,
+                    "endLine": 34,
+                    "endColumn": 12,
+                    "endOffset": 1559
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 544,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1564,
+                    "endLine": 38,
+                    "endColumn": 12,
+                    "endOffset": 1715
+                },
+                "from": {
+                    "file": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 382,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 536
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 201
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 226,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 374
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 206,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 1611,
+                        "endLine": 51,
+                        "endColumn": 12,
+                        "endOffset": 1936
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 778
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 966,
+                        "endLine": 34,
+                        "endColumn": 12,
+                        "endOffset": 1218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 783,
+                    "endLine": 22,
+                    "endColumn": 12,
+                    "endOffset": 1030
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 706,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 958
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1035,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1216
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 1419,
+                        "endLine": 44,
+                        "endColumn": 12,
+                        "endOffset": 1603
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1221,
+                    "endLine": 30,
+                    "endColumn": 12,
+                    "endOffset": 1403
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1226,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 1411
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1408,
+                    "endLine": 34,
+                    "endColumn": 12,
+                    "endOffset": 1559
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 544,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1564,
+                    "endLine": 38,
+                    "endColumn": 12,
+                    "endOffset": 1715
+                },
+                "from": {
+                    "file": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 382,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 536
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_tilte_bar_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="@dimen/title_bar_height">
+
+    <TextView
+        android:id="@+id/id_title_bar_left_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:textIsSelectable="false"
+		android:visibility="gone"
+		android:textColor="@color/color_tilte_bar_text"
+		android:textSize="@dimen/fontsize_tilte_right_text"
+	/>
+    
+    <TextView
+        android:id="@+id/id_title_bar_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="@string/title_name"
+		android:textColor="@color/color_tilte_bar_text"
+		android:textSize="@dimen/fontsize_tilte_bar_text"
+	/>
+    
+    <TextView
+        android:id="@+id/id_title_bar_right_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+		android:visibility="gone"
+		android:textColor="@color/color_tilte_bar_text"
+		android:textSize="@dimen/fontsize_tilte_right_text"
+	/>
+    
+    <ImageView
+        android:id="@+id/id_title_bar_right_icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+		android:visibility="gone"
+	/>
+    
+</RelativeLayout>

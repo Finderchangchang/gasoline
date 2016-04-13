@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="G:\Vikicc_Git\gasoline1\app\src\main\assets"><file name="base.dat" path="G:\Vikicc_Git\gasoline1\app\src\main\assets\base.dat"/><file name="license.lic" path="G:\Vikicc_Git\gasoline1\app\src\main\assets\license.lic"/></source></dataSet><dataSet config="debug"><source path="G:\Vikicc_Git\gasoline1\app\src\debug\assets"/></dataSet></merger>

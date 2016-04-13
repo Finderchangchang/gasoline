@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/activity_bg">
+
+    <include layout="@layout/title_bar" android:id="@+id/id_title_bar_layout" android:visibility="gone"/>
+    
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:id="@+id/id_title_layout"
+	    android:background="#46e38a2f"
+	    android:layout_marginTop="24dp"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingBottom="10dp"
+	    android:layout_height="@dimen/title_bar_height">
+	    
+		<TextView style="@style/MainTitleStyle"
+			android:text="@string/text_customer_result"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_gravity="bottom"
+		/>
+
+		<ImageView
+	        android:id="@+id/id_button_back"
+			android:src="@drawable/icon_back"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			    
+	</RelativeLayout>
+	
+	<ListView
+	    android:id="@+id/id_list_view"
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+	/>
+</LinearLayout><!-- From: file:/G:/Vikicc_Git/gasoline1/app/src/main/res/layout/layout_customer_result.xml -->

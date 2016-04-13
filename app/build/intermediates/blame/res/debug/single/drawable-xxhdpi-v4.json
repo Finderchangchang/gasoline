@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\activity_bg.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable-xxhdpi\\activity_bg.png"
+    },
+    {
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\activity_bg.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable-xxhdpi\\activity_bg.png"
+    }
+]

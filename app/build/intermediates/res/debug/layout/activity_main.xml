@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/id_title_bar"
+        layout="@layout/title_bar"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/id_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_marginTop="24dp"
+        android:background="#46e38a2f"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <TextView
+            android:id="@+id/id_main_title"
+            style="@style/MainTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:text="散装汽油" />
+
+        <TextView
+            android:id="@+id/id_sub_title"
+            style="@style/SubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/id_main_title"
+            android:text="实名登记系统" />
+
+        <TextView
+            android:id="@+id/id_name_title"
+            style="@style/SubTitleStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/id_button_setting"
+            android:layout_toRightOf="@+id/id_sub_title"
+            android:singleLine="true"
+            android:text="..." />
+
+        <ImageView
+            android:id="@+id/id_button_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_setting" />
+    </RelativeLayout>
+
+    <com.app.bulkgasoline.PagerTab
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_bar_height" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout><!-- From: file:/G:/Vikicc_Git/gasoline1/app/src/main/res/layout/activity_main.xml -->

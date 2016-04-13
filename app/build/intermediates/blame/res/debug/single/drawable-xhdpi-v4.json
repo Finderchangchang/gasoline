@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\spinner_arrow.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable-xhdpi\\spinner_arrow.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\spinner_arrow.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable-xhdpi\\spinner_arrow.png"
+    },
+    {
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\activity_bg.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable-xhdpi\\activity_bg.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\activity_bg.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable-xhdpi\\activity_bg.png"
+    },
+    {
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_setting.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable-xhdpi\\icon_setting.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_setting.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable-xhdpi\\icon_setting.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    }
+]

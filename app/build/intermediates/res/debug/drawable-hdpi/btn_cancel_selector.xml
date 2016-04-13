@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/btn_cancel_pressed" />
+    <item android:state_enabled="true" android:drawable="@drawable/btn_cancel" />
+</selector>
+<!-- From: file:/G:/Vikicc_Git/gasoline1/app/src/main/res/drawable-hdpi/btn_cancel_selector.xml -->

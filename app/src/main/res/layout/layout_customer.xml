@@ -1,0 +1,426 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addCustomer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <com.app.bulkgasoline.PhotosLinearLayout
+                android:id="@+id/id_add_customer_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_img_height"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/zhengjian_img_iv"
+                android:layout_width="@dimen/user_img_height"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_header2" />
+
+            <ImageView
+                android:id="@+id/zhuapai_img_iv"
+                android:layout_width="@dimen/user_img_height"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/default_header1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="#aa8e4903" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height">
+
+            <TextView style="@style/FormTextIndeed" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_customer_name" />
+
+            <EditText
+                android:id="@+id/id_text_name"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                android:id="@+id/id_label_indeed"
+                style="@style/FormTextIndeed" />
+
+            <TextView
+                android:id="@+id/id_label_certi_type"
+                style="@style/FormTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/id_label_indeed"
+                android:text="@string/text_certi_type" />
+
+            <com.app.bulkgasoline.SpinnerCertiType
+                android:id="@+id/id_certi_type_spinner"
+                style="@style/FormSpinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/id_button_read_card"
+                android:layout_toRightOf="@+id/id_label_certi_type" />
+
+            <Button
+                android:id="@+id/id_button_read_card"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bottom_bar_bg"
+                android:text="@string/text_button_read_card"
+                android:textColor="@color/color_tilte_bar_text" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView style="@style/FormTextIndeed" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_certi_number" />
+
+            <EditText
+                android:id="@+id/id_text_certi_number"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:visibility="gone">
+
+            <TextView style="@style/FormTextIndeed" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_birth_day" />
+
+            <EditText
+                android:id="@+id/id_text_birthday"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView style="@style/FormTextIndeed" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_tel_number" />
+
+            <EditText
+                android:id="@+id/id_text_tel_number"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView style="@style/FormTextIndeed" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_liter" />
+
+            <EditText
+                android:id="@+id/id_text_liter"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent"
+                android:numeric="decimal" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                android:id="@+id/id_label_indeed"
+                style="@style/FormTextIndeed" />
+
+            <TextView
+                android:id="@+id/id_label_Gasoline_type"
+                style="@style/FormTextStyle"
+                android:layout_toRightOf="@+id/id_label_indeed"
+                android:text="@string/text_Gasoline_type" />
+
+            <com.app.bulkgasoline.SpinnerGasolineType
+                android:id="@+id/id_text_gasoline_type"
+                style="@style/FormSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_label_Gasoline_type" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                android:id="@+id/id_label_indeed"
+                style="@style/FormTextIndeed" />
+
+            <TextView
+                android:id="@+id/id_label_buy_intent"
+                style="@style/FormTextStyle"
+                android:layout_toRightOf="@+id/id_label_indeed"
+                android:text="@string/text_Transport_type" />
+
+            <com.app.bulkgasoline.SpinnerTransportType
+                android:id="@+id/id_text_transport_type"
+                style="@style/FormSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_label_buy_intent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/id_vehicle_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_vehicle_number" />
+
+            <EditText
+                android:id="@+id/id_text_vehicle_number"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                android:id="@+id/id_label_indeed"
+                style="@style/FormTextIndeed" />
+
+            <TextView
+                android:id="@+id/id_label_buy_intent"
+                style="@style/FormTextStyle"
+                android:layout_toRightOf="@+id/id_label_indeed"
+                android:text="@string/text_buy_intent" />
+
+            <com.app.bulkgasoline.SpinnerBuyIntent
+                android:id="@+id/id_text_buy_intent_spinner"
+                style="@style/FormSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_label_buy_intent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_company_name" />
+
+            <EditText
+                android:id="@+id/id_text_company_name"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_address" />
+
+            <EditText
+                android:id="@+id/id_text_address"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                android:id="@+id/id_label_indeed"
+                style="@style/FormTextIndeed" />
+
+            <TextView
+                android:id="@+id/id_label_customer_operator"
+                style="@style/FormTextStyle"
+                android:layout_toRightOf="@+id/id_label_indeed"
+                android:text="@string/text_operator" />
+
+            <com.app.bulkgasoline.SpinnerOperator
+                android:id="@+id/id_text_operator_spinner"
+                style="@style/FormSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_label_customer_operator" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_doubt" />
+
+            <CheckBox
+                android:id="@+id/id_text_doubt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_doubt_desc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_doubt_desc" />
+
+            <EditText
+                android:id="@+id/id_text_doubt_desc"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_nation" />
+
+            <EditText
+                android:id="@+id/id_text_nation"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_latitude" />
+
+            <EditText
+                android:id="@+id/id_text_latitude"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FormTextIndeed"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/FormTextStyle"
+                android:text="@string/text_longitude" />
+
+            <EditText
+                android:id="@+id/id_text_longitude"
+                style="@style/FormEditStyle"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/id_button_add_cusomer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_top_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/bottom_bar_bg"
+            android:text="@string/text_button_checkin"
+            android:textColor="@color/color_tilte_bar_text" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_icon_layout_height" >
+
+        <ImageView
+            android:id="@+id/id_button_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/icon_setting" />
+
+        <LinearLayout
+            android:id="@+id/id_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/id_main_title"
+                style="@style/MainTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="散装汽油" />
+
+            <TextView
+                android:id="@+id/id_sub_title"
+                style="@style/SubTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="实名登记系统" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_input_height"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_input_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                style="@style/LoginFormTextStyle"
+                android:text="@string/hint_text_username" />
+
+            <EditText
+                android:id="@+id/id_text_username"
+                style="@style/LoginFormEditStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/login_input_sep" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                style="@style/LoginFormTextStyle"
+                android:text="@string/hint_text_password" />
+
+            <EditText
+                android:id="@+id/id_text_password"
+                style="@style/LoginFormEditStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00ffffff"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/item_vertical_space" >
+
+        <CheckBox
+            android:id="@+id/id_checkbox_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/text_checkbox_remember"
+            android:textColor="#5f210f" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/id_button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/item_vertical_space"
+        android:background="@drawable/bottom_bar_bg"
+        android:text="@string/text_button_login"
+        android:textColor="@color/color_tilte_bar_text" />
+
+</LinearLayout>

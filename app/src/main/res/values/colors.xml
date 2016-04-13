@@ -1,0 +1,21 @@
+<resources>
+
+    <color name="color_preview_bg">#000000</color>
+    
+    <color name="color_activity_bg">#ffffff</color>
+    <color name="color_login_activity_bg">#e0e0e0</color>
+    
+    <!--  
+    <color name="color_tilte_bar_bg">#0074e1</color>
+    -->
+    
+    <color name="color_tilte_bar_bg">#3a92ed</color>
+	<color name="color_tilte_bar_text">#ffffff</color>
+	
+	<color name="color_bottom_bar_bg_normal">#e35000</color>
+	<color name="color_bottom_bar_bg_pressed">#f24000</color>
+	
+	<color name="color_white">#ffffff</color>
+	
+	<color name="pager_sliding_tab_background_tab_pressed">#6633B5E5</color>
+</resources>
