@@ -97,9 +97,7 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
             onButtonAddVehicle(view);
         }
     }
-
     // 拍照
-
     private OnClickListener onClickAddPhoto = new OnClickListener() {
 
         @Override

@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity {
 
 	private PagerTab tabs;
 	private ViewPager pager;
-	private CalcPagerAdapter adapter;
+	public static CalcPagerAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -130,6 +130,7 @@ public class MainActivity extends BaseActivity {
 			}
 			return fragment;
 		}
+
 	}
 
 	@Override
@@ -138,12 +139,12 @@ public class MainActivity extends BaseActivity {
 				.setTitle(R.string.text_to_exit)
 				.setIcon(android.R.drawable.ic_dialog_info)
 				.setPositiveButton(R.string.text_ok,
-						new DialogInterface.OnClickListener() {
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								MainActivity.super.onBackPressed();
-							}
-						}).setNegativeButton(R.string.text_cancel, null).show();
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                MainActivity.super.onBackPressed();
+                            }
+                        }).setNegativeButton(R.string.text_cancel, null).show();
 	}
 }

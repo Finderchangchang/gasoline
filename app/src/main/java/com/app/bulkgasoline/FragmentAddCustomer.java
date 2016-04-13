@@ -398,6 +398,7 @@ public class FragmentAddCustomer extends BaseFragment implements
      * @return 合法为true
      */
     private boolean checkPeopleInput() {
+//        MainActivity.adapter
         String name = customer_name.getText().toString();
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(mContext, R.string.text_please_input_people_name,
