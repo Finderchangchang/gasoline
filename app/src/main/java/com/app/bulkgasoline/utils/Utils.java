@@ -60,6 +60,7 @@ public class Utils {
     public static final int KEY_ZHENGJIAN = 501;//证件照
     public static final int KEY_ZHUAPAI = 502;//抓拍照
     public static final String KEY_PAIZHAO_NUM = "PAIZHAO_NUM";//拍照号码
+    public static final String KEY_ZHONGDIAN = "ZHONGDIAN";//正在填写重点车辆
 
     public static boolean fillTestData() {
         return false;

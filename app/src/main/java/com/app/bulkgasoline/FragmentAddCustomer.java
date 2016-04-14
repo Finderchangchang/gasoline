@@ -1,6 +1,7 @@
 package com.app.bulkgasoline;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import com.app.bulkgasoline.MainActivity.CalcPagerAdapter;
@@ -19,6 +20,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -78,6 +80,7 @@ public class FragmentAddCustomer extends BaseFragment implements
     // #start---------onCreate方法-------
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        mImgs = new ArrayList<>();
         super.onCreate(savedInstanceState);
     }
 
@@ -88,11 +91,8 @@ public class FragmentAddCustomer extends BaseFragment implements
         return R.layout.layout_customer;
     }
 
-    // #end
-
-    // #start --------initFragment相关组件管理，事件--------
-    protected void initFragment(Bundle savedInstanceState) {
-        mImgs = new ArrayList<>();
+    @Override
+    public void initViews() {
         // #start ---相关控件声明------------
         vehicle_number = (EditText) mContentView
                 .findViewById(R.id.id_text_vehicle_number);
@@ -135,21 +135,11 @@ public class FragmentAddCustomer extends BaseFragment implements
                 .findViewById(R.id.id_button_add_cusomer);
         zhengjian_img_iv = (ImageView) mContentView.findViewById(R.id.zhengjian_img_iv);
         zhuapai_img_iv = (ImageView) mContentView.findViewById(R.id.zhuapai_img_iv);
-
         read_card.setOnClickListener(this);
         is_doubt.setOnClickListener(this);
         btn_submit.setOnClickListener(this);
         zhengjian_img_iv.setOnClickListener(this);
         zhuapai_img_iv.setOnClickListener(this);
-        tel_number.setOnFocusChangeListener(new OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View arg0, boolean arg1) {
-                if (arg1) {
-                    checkDialog();
-                }
-            }
-        });
         // #end
 
         // #start ----------点击选择运输类型：机动车的话添加车牌号，不是机动车隐藏------------
@@ -184,15 +174,16 @@ public class FragmentAddCustomer extends BaseFragment implements
                 if (!result) {// 失去焦点验证改车牌号是否为重点地区车辆(Code_DangerZone)Utils.codesEqual
                     // 先判断是否为重点地区车辆，再判断是否是本地全国布控车辆
                     String num = vehicle_number.getText().toString().trim();//获得当前输入的车牌号
-                    if (num.contains("藏") || num.contains("新")) {
-                        MainActivity.pager.setCurrentItem(1);
-                        Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, num);
+                    String now_num = Utils.ReadString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM);
+                    if (!now_num.equals(num)) {//本地存储的号码与输入的号码不用，再判断是否为重点地区车辆
+                        if (num.contains("藏") || num.contains("新")) {
+                            Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, num);
+                            MainActivity.pager.setCurrentItem(1);
+                        }
                     }
                 }
             }
         });
-        // #end
-
         // #start ----------第一次启动页面默认显示添加车牌号的文本框----------------------
         if (transport_type.getSelectedKey() == "0") {// 如果选择的运输方式为机动车
             id_vehicle_number.setVisibility(View.VISIBLE);
@@ -200,8 +191,27 @@ public class FragmentAddCustomer extends BaseFragment implements
             id_vehicle_number.setVisibility(View.GONE);
             vehicle_number.setText("");
         }
-        // #end
     }
+
+    private void loadRead() {
+        zhengjian_img_iv.setImageResource(R.drawable.head_img);
+        InputStream is = getResources().openRawResource(R.drawable.head_img);
+        if (mImgs.size() > 0 && mImgs.get(0) != null) {
+            mImgs.remove(0);
+        }
+        mImgs.add(0, BitmapFactory.decodeStream(is));
+        customer_name.setText("成伟");
+        certi_number.setText("130623198304152437");
+    }
+
+    @Override
+    protected void lazyLoad() {
+        if (("1").equals(Utils.ReadString(MainActivity.mIntails, Utils.KEY_ZHONGDIAN))) {
+            Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, "");
+        }
+    }
+
+    // #end
 
     /**
      * 开启蓝牙，以及拍照，接收返回结果
@@ -296,16 +306,17 @@ public class FragmentAddCustomer extends BaseFragment implements
                 break;
             case R.id.id_button_read_card://读卡按钮
                 Utils.hideIM(mContext);//关闭软键盘
-                BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
-                if (null != ba) {
-                    if (!ba.isEnabled()) {
-                        intent = new Intent(
-                                BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                        startActivityForResult(intent, BLUETTOOTH_RESULT);
-                    } else {
-                        startReadCard();
-                    }
-                }
+//                BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
+//                if (null != ba) {
+//                    if (!ba.isEnabled()) {
+//                        intent = new Intent(
+//                                BluetoothAdapter.ACTION_REQUEST_ENABLE);
+//                        startActivityForResult(intent, BLUETTOOTH_RESULT);
+//                    } else {
+//                        startReadCard();
+//                    }
+//                }
+                loadRead();
                 break;
         }
     }
@@ -329,6 +340,7 @@ public class FragmentAddCustomer extends BaseFragment implements
     /**
      * 开始读取身份证信息
      */
+
     private void startReadCard() {
         String address = Utils.ReadBlueToothAddress(mContext);
         if (Utils.isEmpty(address)) {
@@ -534,7 +546,7 @@ public class FragmentAddCustomer extends BaseFragment implements
         vehicle_number.setText("");
         zhengjian_img_iv.setImageResource(R.drawable.default_header2);
         zhuapai_img_iv.setImageResource(R.drawable.default_header1);
-        Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, "");
+        mImgs = new ArrayList<>();
     }
 
 

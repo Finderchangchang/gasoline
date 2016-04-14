@@ -27,7 +27,6 @@ public class QueryResultCustomerActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_customer_result);
-
 		initTitleBarText();
 		initListView();
 	}
@@ -35,9 +34,7 @@ public class QueryResultCustomerActivity extends BaseActivity {
 	private void initTitleBarText() {
 		TextView title_text = (TextView) findViewById(R.id.id_title_bar_text);
 		title_text.setText(R.string.text_customer_result);
-
 		ImageView setting_back = (ImageView) findViewById(R.id.id_button_back);
-
 		setting_back.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -52,9 +49,8 @@ public class QueryResultCustomerActivity extends BaseActivity {
 		Intent intent = getIntent();
 		String key = intent.getStringExtra("key");
 		String value = intent.getStringExtra("value");
-		System.out.println("key:"+key+"value:"+value);
 		DBHelper.queryCustomers(this, key, value, mCustomers);
-		
+
 		ListView listview = (ListView) findViewById(R.id.id_list_view);
 		listview.setAdapter(mBaseAdapter);
 
@@ -69,7 +65,6 @@ public class QueryResultCustomerActivity extends BaseActivity {
 				CustomerModel customer = (CustomerModel) mBaseAdapter
 						.getItem(position);
 				intent.putExtra("CustomerModel", customer);
-
 				startActivity(intent);
 			}
 		});

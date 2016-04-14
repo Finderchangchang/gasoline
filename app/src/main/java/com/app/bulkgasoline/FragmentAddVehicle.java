@@ -47,8 +47,8 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
         return R.layout.layout_vehicle;
     }
 
-    protected void initFragment(Bundle savedInstanceState) {
-
+    @Override
+    public void initViews() {
         vehicle_photos = (PhotosLinearLayout) mContentView
                 .findViewById(R.id.id_add_vehicle_photo);
         vehicle_type = (SpinnerVehicleType) mContentView
@@ -69,14 +69,23 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
                 .findViewById(R.id.id_text_vehicle_operator_spinner);
         btn_submit = (Button) mContentView
                 .findViewById(R.id.id_button_add_vehicle);
+    }
+
+    @Override
+    protected void lazyLoad() {
         String carNum = Utils.ReadString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM);
         if ("" != carNum) {
             vehicle_number.setText(carNum);
             vehicle_number.setFocusable(false);
+            Utils.WriteString(MainActivity.mIntails, Utils.KEY_ZHONGDIAN, "1");
+        } else {
+            vehicle_number.setText("");
+            vehicle_number.setFocusable(true);
         }
         vehicle_photos.setFixedHeader(false);
         vehicle_photos.setClickPohoListener(onClickAddPhoto);
         btn_submit.setOnClickListener(this);
+
     }
 
     @Override
@@ -178,17 +187,12 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
         model.VehiclePersonCount = Utils.getString(vehicle_peoples);
         if (Utils.isEmpty(model.VehiclePersonCount))
             model.VehiclePersonCount = "0";
-
         model.VehicleDirection = Utils.getString(vehicle_direction);
         model.EmployeeId = vehicle_operator.getSelectedKey();
         model.CompanyId = getAuthorizeModel().UserId;
-
         model.Comment = "AddVehicle";
-
         model.CreateTime = Utils.getCSTimeString();
-
         model.VehicleImageBitmaps = vehicle_photos.getBitmaps();
-
         return model;
     }
 
@@ -234,6 +238,6 @@ public class FragmentAddVehicle extends BaseFragment implements OnClickListener 
         vehicle_number.setText("");
         vehicle_peoples.setText("");
         vehicle_direction.setText("");
-        Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, "");
+        vehicle_number.setFocusable(true);
     }
 }

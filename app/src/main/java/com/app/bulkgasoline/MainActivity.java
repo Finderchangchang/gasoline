@@ -39,6 +39,9 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+    /**
+     *
+     */
     private void initTitleBarText() {
         TextView title_text = (TextView) findViewById(R.id.id_title_bar_text);
         title_text.setText(R.string.title_name);
@@ -145,6 +148,7 @@ public class MainActivity extends BaseActivity {
                             public void onClick(DialogInterface dialog,
                                                 int which) {
                                 MainActivity.super.onBackPressed();
+                                Utils.WriteString(MainActivity.mIntails, Utils.KEY_ZHONGDIAN, "");
                             }
                         }).setNegativeButton(R.string.text_cancel, null).show();
     }

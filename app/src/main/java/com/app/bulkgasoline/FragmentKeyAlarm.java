@@ -35,14 +35,21 @@ public class FragmentKeyAlarm extends BaseFragment {
         return R.layout.layout_keyalarm;
     }
 
-    protected void initFragment(Bundle savedInstanceState) {
+    @Override
+    public void initViews() {
         listView = (ListView) mContentView.findViewById(R.id.police_list);
         police_no_data = (LinearLayout) mContentView.findViewById(R.id.police_no_data);
-        // 获得辖区编码
-        String departmentId = Utils.ReadString(mContext, Utils.KEY_USERNAME);
         GetKeyAlarmTask getKey = new GetKeyAlarmTask(getGlobalModel(),
-                getAuthorizeModel(), departmentId);
+                getAuthorizeModel(), "1306020001");
         getKey.start(getKeyAlarmListener);
+        if (("1").equals(Utils.ReadString(MainActivity.mIntails, Utils.KEY_ZHONGDIAN))) {
+            Utils.WriteString(MainActivity.mIntails, Utils.KEY_PAIZHAO_NUM, "");
+        }
+    }
+
+    @Override
+    protected void lazyLoad() {
+
     }
 
     private GetKeyAlarmListener getKeyAlarmListener = new GetKeyAlarmListener() {

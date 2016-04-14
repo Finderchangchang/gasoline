@@ -36,20 +36,20 @@
         "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\editbox_bg_focus.9.png"
     },
     {
-        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\editbox_bg_normal.9.png",
-        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable\\editbox_bg_normal.9.png"
-    },
-    {
         "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_ok_normal.png",
         "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable\\btn_ok_normal.png"
     },
     {
-        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\default_header.png",
-        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\default_header.png"
+        "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\editbox_bg_normal.9.png",
+        "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable\\editbox_bg_normal.9.png"
     },
     {
         "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_ok_pressed.png",
         "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable\\btn_ok_pressed.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\default_header.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\default_header.png"
     },
     {
         "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_input_bg.png",
@@ -72,12 +72,12 @@
         "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\btn_ok_normal.png"
     },
     {
-        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_back.png",
-        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\icon_back.png"
-    },
-    {
         "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\default_header2.png",
         "source": "G:\\Vikicc_Git\\gasoline1\\app\\src\\main\\res\\drawable\\default_header2.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_back.png",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\icon_back.png"
     },
     {
         "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_jh.png",
@@ -190,6 +190,10 @@
     {
         "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cancel.9.png",
         "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\btn_cancel.9.png"
+    },
+    {
+        "merged": "F:\\CompanyProject\\gasoline\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\head_img.jpg",
+        "source": "F:\\CompanyProject\\gasoline\\app\\src\\main\\res\\drawable\\head_img.jpg"
     },
     {
         "merged": "G:\\Vikicc_Git\\gasoline1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\default_header1.png",
